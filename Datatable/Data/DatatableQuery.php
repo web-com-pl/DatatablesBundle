@@ -808,7 +808,7 @@ class DatatableQuery
      */
     private function getTableName(ClassMetadata $metadata)
     {
-        return strtolower($metadata->getTableName());
+        return str_replace('.', '', strtolower($metadata->getTableName()));
     }
 
     /**
